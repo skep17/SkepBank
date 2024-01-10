@@ -1,6 +1,7 @@
-﻿namespace SkepBank.Application.Services.Authentication;
+﻿using SkepBank.Domain.Entities;
+
+namespace SkepBank.Application.Services.Authentication;
 
 public record AuthenticationResult(
-    Guid Id,
-    string UserName,
+    User User,
     string Token);

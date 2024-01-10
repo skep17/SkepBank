@@ -2,6 +2,6 @@
 
 public interface IAuthenticationService
 {
-    AuthenticationResult Login(string username, string password);
-    AuthenticationResult Register(string username, string password);
+    AuthenticationResult Login(string userName, string password);
+    AuthenticationResult Register(string userName, string password);
 }

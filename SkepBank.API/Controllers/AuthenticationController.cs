@@ -18,9 +18,9 @@ namespace SkepBank.API.Controllers
         [HttpPost("register")]
         public IActionResult Register(RegisterRequest request)
         {
-            var authResult = _authenticationService.Register(request.username, request.password);
+            var authResult = _authenticationService.Register(request.userName, request.password);
 
-            var response = new AuthenticationResponse(authResult.Id, authResult.UserName, authResult.Token);
+            var response = new AuthenticationResponse(authResult.User.Id, authResult.User.UserName, authResult.Token);
 
             return Ok(response);
         }
@@ -28,9 +28,9 @@ namespace SkepBank.API.Controllers
         [HttpPost("login")]
         public IActionResult Login(LoginRequest request)
         {
-            var authResult = _authenticationService.Login(request.username, request.password);
+            var authResult = _authenticationService.Login(request.userName, request.password);
 
-            var response = new AuthenticationResponse(authResult.Id, authResult.UserName, authResult.Token);
+            var response = new AuthenticationResponse(authResult.User.Id, authResult.User.UserName, authResult.Token);
 
             return Ok(response);
         }

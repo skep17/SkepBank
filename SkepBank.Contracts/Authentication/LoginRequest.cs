@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace SkepBank.Contracts.Authentication
 {
     public record LoginRequest(
-        string username,
+        string userName,
         string password);
 }

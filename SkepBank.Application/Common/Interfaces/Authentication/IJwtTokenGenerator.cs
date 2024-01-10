@@ -1,6 +1,8 @@
-﻿namespace SkepBank.Application.Common.Interfaces.Authentication;
+﻿using SkepBank.Domain.Entities;
+
+namespace SkepBank.Application.Common.Interfaces.Authentication;
 
 public interface IJwtTokenGenerator
 {
-    string GenerateToken(Guid userId, string username);
+    string GenerateToken(User user);
 }
