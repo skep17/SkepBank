@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SkepBank.Application\SkepBank.Application.csproj" />
+    <ProjectReference Include="..\SkepBank.Contracts\SkepBank.Contracts.csproj" />
+    <ProjectReference Include="..\SkepBank.Infrastructure\SkepBank.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

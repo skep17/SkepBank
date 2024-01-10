@@ -5,6 +5,14 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkepBank.API", "SkepBank.API\SkepBank.API.csproj", "{5184A0D7-0B0D-4FDF-AC1B-E1B50A36C6E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkepBank.Application", "SkepBank.Application\SkepBank.Application.csproj", "{3EF0294A-B4BB-4398-837A-776E0D93674C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkepBank.Contracts", "SkepBank.Contracts\SkepBank.Contracts.csproj", "{0EE9F0C0-CDB4-4E1C-955E-553F9C8C82A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkepBank.Domain", "SkepBank.Domain\SkepBank.Domain.csproj", "{457310F7-0F61-40ED-8D9B-322D9BC12CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkepBank.Infrastructure", "SkepBank.Infrastructure\SkepBank.Infrastructure.csproj", "{4543D822-7E89-425C-BF90-5F5F3CE72898}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{5184A0D7-0B0D-4FDF-AC1B-E1B50A36C6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5184A0D7-0B0D-4FDF-AC1B-E1B50A36C6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5184A0D7-0B0D-4FDF-AC1B-E1B50A36C6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF0294A-B4BB-4398-837A-776E0D93674C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF0294A-B4BB-4398-837A-776E0D93674C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF0294A-B4BB-4398-837A-776E0D93674C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF0294A-B4BB-4398-837A-776E0D93674C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE9F0C0-CDB4-4E1C-955E-553F9C8C82A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE9F0C0-CDB4-4E1C-955E-553F9C8C82A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE9F0C0-CDB4-4E1C-955E-553F9C8C82A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE9F0C0-CDB4-4E1C-955E-553F9C8C82A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457310F7-0F61-40ED-8D9B-322D9BC12CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457310F7-0F61-40ED-8D9B-322D9BC12CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457310F7-0F61-40ED-8D9B-322D9BC12CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457310F7-0F61-40ED-8D9B-322D9BC12CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4543D822-7E89-425C-BF90-5F5F3CE72898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4543D822-7E89-425C-BF90-5F5F3CE72898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4543D822-7E89-425C-BF90-5F5F3CE72898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4543D822-7E89-425C-BF90-5F5F3CE72898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
