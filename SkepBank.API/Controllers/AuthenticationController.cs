@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SkepBank.Application.Services.Authentication;
+using SkepBank.Application.Services.Authentication.Commands;
+using SkepBank.Application.Services.Authentication.Queries;
 using SkepBank.Contracts.Authentication;
 
 namespace SkepBank.API.Controllers
@@ -8,17 +9,21 @@ namespace SkepBank.API.Controllers
     [Route("auth")]
     public class AuthenticationController : ControllerBase
     {
-        private readonly IAuthenticationService _authenticationService;
+        private readonly IAuthenticationQueryService _authenticationQueryService;
+        private readonly IAuthenticationCommandService _authenticationCommandService;
 
-        public AuthenticationController(IAuthenticationService authenticationService)
+        public AuthenticationController(
+            IAuthenticationQueryService authenticationService,
+            IAuthenticationCommandService authenticationCommandService)
         {
-            _authenticationService = authenticationService;
+            _authenticationQueryService = authenticationService;
+            _authenticationCommandService = authenticationCommandService;
         }
 
         [HttpPost("register")]
         public IActionResult Register(RegisterRequest request)
         {
-            var authResult = _authenticationService.Register(request.userName, request.password);
+            var authResult = _authenticationCommandService.Register(request.userName, request.password);
 
             var response = new AuthenticationResponse(authResult.User.Id, authResult.User.UserName, authResult.Token);
 
@@ -28,7 +33,7 @@ namespace SkepBank.API.Controllers
         [HttpPost("login")]
         public IActionResult Login(LoginRequest request)
         {
-            var authResult = _authenticationService.Login(request.userName, request.password);
+            var authResult = _authenticationQueryService.Login(request.userName, request.password);
 
             var response = new AuthenticationResponse(authResult.User.Id, authResult.User.UserName, authResult.Token);
 
